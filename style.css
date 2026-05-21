@@ -1,0 +1,197 @@
+body{
+    margin:0;
+
+    font-family:"Cairo", sans-serif;
+
+    background:#111;
+    color:white;
+}
+
+/* ---------------- */
+/* الحاوية الرئيسية */
+/* ---------------- */
+
+.main_layout{
+    display:flex;
+    gap:20px;
+
+    padding:30px;
+
+    align-items:flex-start;
+}
+
+/* ---------------- */
+/* البروفايل */
+/* ---------------- */
+
+.profile_card{
+    background:#222;
+
+    width:550px;
+
+    padding:30px;
+
+    display:flex;
+    align-items:center;
+
+    gap:20px;
+
+    border-radius:20px;
+
+    
+}
+
+/* الصورة */
+.profile_image{
+    width:200px;
+    height:200px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+}
+
+.side_card_icon{
+    border-radius:50%;
+    object-fit:cover;
+    width: 20%;
+
+}
+.side_card_icon:hover{
+    background:#222;
+
+    cursor:pointer;
+    transform:scale(1.1);
+
+    transition:0.3s;
+}
+
+.title{
+    text-align:left;
+    font-size:30px;
+    margin-left:20px;
+    
+}
+
+
+/* النص + الأيقونات */
+.profile_text{
+    display:flex;
+    flex-direction:column;
+}
+
+.social_icons{
+    display:flex;
+    gap:10px;
+
+    margin-top:10px;
+}
+
+.icon{
+    width:35px;
+    height:35px;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+.icon:hover{
+    transform:scale(1.1);
+}
+
+/* ---------------- */
+/* المستطيل */
+/* ---------------- */
+
+.side_card{
+    background:#222;
+
+    padding:30px;
+    width:300px;
+
+    border-radius:20px;
+}
+
+/* ---------------- */
+/* الكروت */
+/* ---------------- */
+
+.container{
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    padding:30px;
+}
+
+.card{
+    background:#222;
+
+    width:250px;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+
+    background:#333;
+
+    box-shadow:0 10px 20px rgba(0,0,0,0.5);
+}
+
+.card:active{
+    transform:scale(0.95);
+}
+
+/* ---------------- */
+/* الجوال */
+/* ---------------- */
+
+@media (max-width:768px){
+
+    .main_layout{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .profile_card{
+        width:90%;
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .profile_image{
+        width:150px;
+        height:150px;
+    }
+
+    .social_icons{
+        justify-content:center;
+    }
+
+    .side_card{
+        width:90%;
+    }
+
+    .container{
+        flex-direction:column;
+        align-items:center;
+    }
+    .title{
+        text-align:center;
+        font-size:28px;
+    }
+    .card{
+        width:90%;
+    }
+}
